@@ -1,0 +1,113 @@
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    height: 100vh;
+    background: #ffffff; /* pure white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Hide pixel world completely */
+#pixel-world {
+    display: none;
+}
+
+/* ===== BOOK SCENE ===== */
+.scene {
+    width: 500px;
+    height: 500px;
+    perspective: 2000px;
+}
+
+/* ===== BOOK ===== */
+.book {
+    width: 450px;
+    height: 450px;
+    position: relative;
+    transform-style: preserve-3d;
+    border-radius: 40px;
+    box-shadow: -40px 40px 80px rgba(0,0,0,0.15);
+}
+
+/* ===== COVER ===== */
+.cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("cover.png") no-repeat center center;
+    background-size: cover;
+    border-radius: 40px;
+    transform-origin: left;
+    transition: transform 1s ease;
+    cursor: pointer;
+    z-index: 1000;
+    backface-visibility: hidden;
+}
+
+/* ===== PAGES ===== */
+.page {
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    display: flex;
+    transform-origin: left;
+    transition: transform 1s ease;
+    border-radius: 40px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* ===== LEFT & RIGHT ===== */
+.left,
+.right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== COLOR BOX ===== */
+.color-box {
+    width: 80%;
+    height: 65%;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+/* ===== COLOR NAME ===== */
+.color-name {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+/* ===== FLIP EFFECT ===== */
+.flipped {
+    transform: rotateY(-180deg);
+}
+
+/* ===== ENJOY BUTTON ===== */
+.contact {
+    position: absolute;
+    bottom: 70px;
+    background: #ff8fab;
+    padding: 14px 40px;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0 8px 20px rgba(255, 143, 171, 0.3);
+}
+
+.contact:hover {
+    transform: scale(1.1);
+}
